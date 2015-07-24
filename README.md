@@ -2,7 +2,7 @@
 Location of assignment files for a course in Data Science : Getting &amp; Cleaning Data
 
 ##What is in this repository
-•	CodeBook.md: information about raw and tidy data set and elaboration made to transform them
+•	CodeBook.md: information about raw and tidy data set and the process used to tranform the raw data into the tidy data
 
 •	LICENSE: license terms for text and code
 

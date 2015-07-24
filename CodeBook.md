@@ -1,14 +1,14 @@
-Code Book
+#Code Book
 This codebook looks at both the raw and transformed data sets used in the Getting & Cleaning Data project.
 
-Raw data 
-Collection of data
+##Raw data 
+###Collection of data
 The raw data used in this project can be obtained from UCI Machine Learning repository. In particular we used the Human Activity Recognition Using Smartphones Data Set [1].  This data was used to conduct experiments exploiting the Support Vector Machine (SVM) [2].
 The collectors used a sensor based approach employing smartphones as sensing tools, utilising the embedded sensors such as microphones, dual cameras, accelerometers and  gyroscopes.   The 3-axial time domain signals from accelerometer and gyroscope in each smart phone were captured at a constant rate of 50 Hz 
 The data set was built from experiments carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (walking, walking upstairs, walking downstairs, sitting, standing, laying) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, 3-axial linear acceleration and 3-axial angular velocity were captured at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually [4].
 The obtained data set has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
 
-Variables
+###Variables
 The data from each sensor was filtered to remove noise or to discriminate between body and gravity acceleration signals using another filter. 
 Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals.  The magnitude of these three-dimensional signals were then calculated using the Euclidean norm. 
 A Fast Fourier Transform (FFT) was applied to some of these time domain signals to obtain frequency domain signals.
@@ -34,24 +34,27 @@ The set of variables that were derived from these signals are:
 No unit of measurement are used as all features were normalized and bounded within [-1,1].
 
 
-Data transformation
+##Data transformation
 The raw data sets are processed with run_analisys.R script to create a tidy data set.  This was done in a five step process.
-STEP 1.  Merge training and test sets
+###STEP 1.  Merge training and test sets
 Test and training data (X_train.txt, X_test.txt), subject ids (subject_train.txt, subject_test.txt) and activity ids (y_train.txt, y_test.txt) are merged to obtain a single data set. Variables are labelled with the names assigned by original collectors (features.txt).
-STEP 2.  Extract mean and standard deviation variables
+
+
+###STEP 2.  Extract mean and standard deviation variables
 From the merged data set is extracted and intermediate data set with only the values of estimated mean (variables with labels that contain "mean") and standard deviation (variables with labels that contain "std").
 
-STEP 3.  Use descriptive activity names
+###STEP 3.  Use descriptive activity names
 A new column is added to intermediate data set with the activity description. Activity id column is used to look up descriptions in activity_labels.txt.
 
 
-STEP 4.  Label variables appropriately
+###STEP 4.  Label variables appropriately
 Labels given from the original collectors were changed:
 •	to obtain valid R names without parentheses, dashes and commas
 •	to obtain more descriptive labels
 
-STEP 5. Create an independent summary as a new tidy data set
+###STEP 5. Create an independent summary as a new tidy data set
 From the intermediate data set is created a final tidy data set where numeric variables are averaged for each activity and each subject.
+
 The tidy data set contains 10299 observations with 81 variables divided into:
 •	an activity label (Activity): WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
 •	an identifier of the subject who carried out the experiment (Subject): 1, 3, 5, 6, 7, 8, 11, 14, 15, 16, 17, 19, 21, 22, 23, 25, 26, 27, 28, 29, 30

@@ -81,8 +81,8 @@ Body Acceleration Magnitude |	TimeDomain.BodyAccelerationMagnitude	|FrequencyDom
 Gravity Acceleration Magnitude |	TimeDomain.GravityAccelerationMagnitude	|  
 Body Acceleration Jerk Magnitude |	TimeDomain.BodyAccelerationJerkMagnitude| FrequencyDomain.BodyAccelerationJerkMagnitude 
 Body Angular Speed Magnitude |	TimeDomain.BodyAngularSpeedMagnitude |	FrequencyDomain.BodyAngularSpeedMagnitude 
-Body Angular Acceleration Magnitude |	TimeDomain.BodyAngularAccelerationMagnitude  FrequencyDomain.BodyAngularAccelerationMagnitude 
----|---|---
+Body Angular Acceleration Magnitude |	TimeDomain.BodyAngularAccelerationMagnitude | FrequencyDomain.BodyAngularAccelerationMagnitude 
+
 
 For variables derived from mean and standard deviation estimation, the previous labels are augmented with the terms "Mean" or "StandardDeviation".
 

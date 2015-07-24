@@ -21,23 +21,23 @@ A Fast Fourier Transform (FFT) was applied to some of these time domain signals 
 The signals were sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window at 50 Hz). From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
 
 The set of variables that were derived from these signals are:
-•	mean(): Mean value
-•	std(): Standard deviation
-•	mad(): Median absolute deviation
-•	max(): Largest value in array
-•	min(): Smallest value in array
-•	sma(): Signal magnitude area
-•	energy(): Energy measure. Sum of the squares divided by the number of values.
-•	iqr(): Interquartile range
-•	entropy(): Signal entropy
-•	arCoeff(): Autoregression coefficients with Burg order equal to 4
-•	correlation(): Correlation coefficient between two signals
-•	maxInds(): Index of the frequency component with largest magnitude
-•	meanFreq(): Weighted average of the frequency components to obtain a mean frequency
-•	skewness(): Skewness of the frequency domain signal
-•	kurtosis(): Kurtosis of the frequency domain signal
-•	bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
-•	angle(): Angle between some vectors.
+*	mean(): Mean value
+*	std(): Standard deviation
+*	mad(): Median absolute deviation
+* max(): Largest value in array
+*	min(): Smallest value in array
+*	sma(): Signal magnitude area
+*	energy(): Energy measure. Sum of the squares divided by the number of values.
+*	iqr(): Interquartile range
+*	entropy(): Signal entropy
+*	arCoeff(): Autoregression coefficients with Burg order equal to 4
+*	correlation(): Correlation coefficient between two signals
+*	maxInds(): Index of the frequency component with largest magnitude
+*	meanFreq(): Weighted average of the frequency components to obtain a mean frequency
+*	skewness(): Skewness of the frequency domain signal
+*	kurtosis(): Kurtosis of the frequency domain signal
+*	bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
+*	angle(): Angle between some vectors.
 No unit of measurement are used as all features were normalized and bounded within [-1,1].
 
 
@@ -57,29 +57,31 @@ A new column is added to intermediate data set with the activity description. Ac
 
 ###STEP 4.  Label variables appropriately
 Labels given from the original collectors were changed:
-•	to obtain valid R names without parentheses, dashes and commas
-•	to obtain more descriptive labels
+*	to obtain valid R names without parentheses, dashes and commas
+*	to obtain more descriptive labels
 
 ###STEP 5. Create an independent summary as a new tidy data set
 From the intermediate data set is created a final tidy data set where numeric variables are averaged for each activity and each subject.
 
 The tidy data set contains 10299 observations with 81 variables divided into:
-•	an activity label (Activity): WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
-•	an identifier of the subject who carried out the experiment (Subject): 1, 3, 5, 6, 7, 8, 11, 14, 15, 16, 17, 19, 21, 22, 23, 25, 26, 27, 28, 29, 30
-•	a 79-feature vector with time and frequency domain signal variables (numeric)
+*	an activity label (Activity): WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+*	an identifier of the subject who carried out the experiment (Subject): 1, 3, 5, 6, 7, 8, 11, 14, 15, 16, 17, 19, 21, 22, 23, 25, 26, 27, 28, 29, 30
+*	a 79-feature vector with time and frequency domain signal variables (numeric)
 
 The following table relates the 17 signals to the names used as prefix for the variables names present in the data set. ".XYZ" denotes three variables, one for each axis.
-Name	Time domain	Frequency domain
-Body Acceleration	TimeDomain.BodyAcceleration.XYZ	FrequencyDomain.BodyAcceleration.XYZ
-Gravity Acceleration	TimeDomain.GravityAcceleration.XYZ	
-Body Acceleration Jerk	TimeDomain.BodyAccelerationJerk.XYZ	FrequencyDomain.BodyAccelerationJerk.XYZ
-Body Angular Speed	TimeDomain.BodyAngularSpeed.XYZ	FrequencyDomain.BodyAngularSpeed.XYZ
-Body Angular Acceleration	TimeDomain.BodyAngularAcceleration.XYZ	
-Body Acceleration Magnitude	TimeDomain.BodyAccelerationMagnitude	FrequencyDomain.BodyAccelerationMagnitude
-Gravity Acceleration Magnitude	TimeDomain.GravityAccelerationMagnitude	
-Body Acceleration Jerk Magnitude	TimeDomain.BodyAccelerationJerkMagnitude	FrequencyDomain.BodyAccelerationJerkMagnitude
-Body Angular Speed Magnitude	TimeDomain.BodyAngularSpeedMagnitude	FrequencyDomain.BodyAngularSpeedMagnitude
-Body Angular Acceleration Magnitude	TimeDomain.BodyAngularAccelerationMagnitude	FrequencyDomain.BodyAngularAccelerationMagnitude
+| Name |	Time domain	 | Frequency domain |
+|----|--------------|------------------|
+|Body Acceleration |	TimeDomain.BodyAcceleration.XYZ	 |FrequencyDomain.BodyAcceleration.XYZ |
+|Gravity Acceleration	| TimeDomain.GravityAcceleration.XYZ |             |	
+|Body Acceleration Jerk	| TimeDomain.BodyAccelerationJerk.XYZ	| FrequencyDomain.BodyAccelerationJerk.XYZ |
+|Body Angular Speed	| TimeDomain.BodyAngularSpeed.XYZ	| FrequencyDomain.BodyAngularSpeed.XYZ |
+|Body Angular Acceleration |	TimeDomain.BodyAngularAcceleration.XYZ	 |           |
+|Body Acceleration Magnitude |	TimeDomain.BodyAccelerationMagnitude	|FrequencyDomain.BodyAccelerationMagnitude |
+|Gravity Acceleration Magnitude |	TimeDomain.GravityAccelerationMagnitude	|  |
+|Body Acceleration Jerk Magnitude |	TimeDomain.BodyAccelerationJerkMagnitude| FrequencyDomain.BodyAccelerationJerkMagnitude |
+|Body Angular Speed Magnitude |	TimeDomain.BodyAngularSpeedMagnitude |	FrequencyDomain.BodyAngularSpeedMagnitude |
+|Body Angular Acceleration Magnitude |	TimeDomain.BodyAngularAccelerationMagnitude | FrequencyDomain.BodyAngularAccelerationMagnitude |
+|---------------------------|-------------|--------------|
 For variables derived from mean and standard deviation estimation, the previous labels are augmented with the terms "Mean" or "StandardDeviation".
 
 

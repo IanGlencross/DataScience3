@@ -38,6 +38,7 @@ The set of variables that were derived from these signals are:
 *	kurtosis(): Kurtosis of the frequency domain signal
 *	bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
 *	angle(): Angle between some vectors.
+
 No unit of measurement are used as all features were normalized and bounded within [-1,1].
 
 
@@ -66,7 +67,7 @@ From the intermediate data set is created a final tidy data set where numeric va
 The tidy data set contains 10299 observations with 81 variables divided into:
 *	an activity label (Activity): WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
 *	an identifier of the subject who carried out the experiment (Subject): 1, 3, 5, 6, 7, 8, 11, 14, 15, 16, 17, 19, 21, 22, 23, 25, 26, 27, 28, 29, 30
-*	a 79-feature vector with time and frequency domain signal variables (numeric)
+*	a 79-feature vector that relates to 17 signals measure on three orthgonal axes in both the time and frequecy domains
 
 The following table relates the 17 signals to the names used as prefix for the variables names present in the data set. ".XYZ" denotes three variables, one for each axis.
 

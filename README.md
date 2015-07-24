@@ -15,7 +15,7 @@ Location of assignment files for a course in Data Science : Getting &amp; Cleani
 2.	download compressed raw data
 3.	unzip raw data and copy the directory <i>UCI HAR Dataset</i> to the cloned repository root directory
 4.	open a R console and set the working directory to the repository root (use setwd())
-5.	run the <b>run_analisys.R</b> script (it requires the plyr package).  To to this type source('run_analysis.R') at et R Consle prompt
+5.	run the <b>run_analisys.R</b> script.  To to this type <quote>source('run_analysis.R')</quote> at the R Consle prompt
 	
 
 In the repository root directory you find the file avg_by_activity_subject.txt containing the tidy data set.

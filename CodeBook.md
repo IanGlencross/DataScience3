@@ -3,7 +3,7 @@ This codebook looks at both the raw and transformed data sets used in the Gettin
 
 ##Raw data 
 ###Collection of data
-The raw data used in this project can be obtained from UCI Machine Learning repository. In particular we used the Human Activity Recognition Using Smartphones Data Set.  This data was used to conduct experiments exploiting the Support Vector Machine (SVM).
+The raw data used in this project can be obtained from UCI Machine Learning repository. In particular we used the Human Activity Recognition Using Smartphones Data Set.  This data was used to conduct experiments exploiting the Support Vector Machine (SVM).  A compressed copy of this data is availble on [cloudfront](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
 
 The collectors used smartphones as sensing tools, utilising the embedded sensors such as microphones, dual cameras, accelerometers and  gyroscopes.   The 3-axial time domain signals from accelerometer and gyroscope in each smart phone were captured at a constant rate of 50 Hz 
 

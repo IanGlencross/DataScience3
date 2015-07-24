@@ -3,8 +3,11 @@ Location of assignment files for a course in Data Science : Getting &amp; Cleani
 
 ##What you find in this repository
 •	CodeBook.md: information about raw and tidy data set and elaboration made to transform them
+
 •	LICENSE: license terms for text and code
+
 •	README.md: this file
+
 •	run_analysis.R: R script to transform raw data set in a tidy one
 
 ##How to create the tidy data set

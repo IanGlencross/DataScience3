@@ -3,9 +3,9 @@ This codebook looks at both the raw and transformed data sets used in the Gettin
 
 ##Raw data 
 ###Collection of data
-The raw data used in this project can be obtained from UCI Machine Learning repository. In particular we used the Human Activity Recognition Using Smartphones Data Set [1].  This data was used to conduct experiments exploiting the Support Vector Machine (SVM) [2].
+The raw data used in this project can be obtained from UCI Machine Learning repository. In particular we used the Human Activity Recognition Using Smartphones Data Set.  This data was used to conduct experiments exploiting the Support Vector Machine (SVM).
 The collectors used a sensor based approach employing smartphones as sensing tools, utilising the embedded sensors such as microphones, dual cameras, accelerometers and  gyroscopes.   The 3-axial time domain signals from accelerometer and gyroscope in each smart phone were captured at a constant rate of 50 Hz 
-The data set was built from experiments carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (walking, walking upstairs, walking downstairs, sitting, standing, laying) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, 3-axial linear acceleration and 3-axial angular velocity were captured at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually [4].
+The data set was built from experiments carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (walking, walking upstairs, walking downstairs, sitting, standing, laying) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, 3-axial linear acceleration and 3-axial angular velocity were captured at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually.
 The obtained data set has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
 
 ###Variables
@@ -34,7 +34,7 @@ The set of variables that were derived from these signals are:
 No unit of measurement are used as all features were normalized and bounded within [-1,1].
 
 
-##Data transformation
+##Transformed Data
 The raw data sets are processed with run_analisys.R script to create a tidy data set.  This was done in a five step process.
 ###STEP 1.  Merge training and test sets
 Test and training data (X_train.txt, X_test.txt), subject ids (subject_train.txt, subject_test.txt) and activity ids (y_train.txt, y_test.txt) are merged to obtain a single data set. Variables are labelled with the names assigned by original collectors (features.txt).
@@ -75,18 +75,10 @@ Body Angular Acceleration Magnitude	TimeDomain.BodyAngularAccelerationMagnitude	
 For variables derived from mean and standard deviation estimation, the previous labels are augmented with the terms "Mean" or "StandardDeviation".
 
 
-The data set is written to the file sensor_avg_by_act_sub.txt.
-References
-1.	Human Activity Recognition Using Smartphones Data Set. URL:http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones. Accessed 05/21/2014
-2.	Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
-3.	 Activity recognition. URL: http://en.wikipedia.org/wiki/Activity_recognition. Accessed 05/21/2014
-4.	Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. A Public Domain Dataset for Human Activity Recognition Using Smartphones. ESANN 2013 proceedings, European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning. Bruges (Belgium), 24-26 April 2013
-5.	 Time domain. URL: http://en.wikipedia.org/wiki/Time-domain. Accessed 05/21/2014
-6.	Hertz. URL: http://en.wikipedia.org/wiki/Hertz. Accessed 05/21/2014
-7.	Jerk. URL: http://en.wikipedia.org/wiki/Jerk_(physics). Accessed 05/21/2014
-8.	Magnitude. URL: http://en.wikipedia.org/wiki/Magnitude_(mathematics). Accessed 05/21/2014
-9.	Euclidean norm. URL: http://en.wikipedia.org/wiki/Norm_(mathematics)#Euclidean_norm. Accessed 05/21/2014
-10.	Fast Fourier transform. URL: http://en.wikipedia.org/wiki/Fast_Fourier_Transform. Accessed 05/21/2014
-11.	Frequency domain. URL: http://en.wikipedia.org/wiki/Frequency_domain. Accessed 05/21/2014
-12.	Tidy data set. URL: https://github.com/jtleek/datasharing#the-tidy-data-set. Accessed 05/21/2014
+The final tidy data set is written to the file sensor_avg_by_act_sub.txt.
+
+
+###References 
+1.	Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. A Public Domain Dataset for Human Activity Recognition Using Smartphones. ESANN 2013 proceedings, European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning. Bruges (Belgium), 24-26 April 2013
+2.	Tidy data set. URL: https://github.com/jtleek/datasharing#the-tidy-data-set. Accessed 05/21/2014
 

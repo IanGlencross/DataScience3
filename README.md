@@ -11,8 +11,8 @@ Location of assignment files for a course in Data Science : Getting &amp; Cleani
 •	run_analysis.R: R script to transform raw data set in a tidy one
 
 ##How to create the tidy data set
-1.	clone this repository: git clone git@github.com:IanGlencross/DataScience3.git
-2.	download compressed raw data
+1.	clone this repository to your local computer.  To do this : `git clone git@github.com:IanGlencross/DataScience3.git`
+2.	download the [compressed raw data](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) 
 3.	unzip raw data and copy the directory <i>UCI HAR Dataset</i> to the cloned repository root directory
 4.	open a R console and set the working directory to the repository root (use setwd())
 5.	run the *run_analisys.R* script.  To to this type `source('run_analysis.R')` at the R Consle prompt

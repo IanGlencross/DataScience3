@@ -4,15 +4,22 @@ This codebook looks at both the raw and transformed data sets used in the Gettin
 ##Raw data 
 ###Collection of data
 The raw data used in this project can be obtained from UCI Machine Learning repository. In particular we used the Human Activity Recognition Using Smartphones Data Set.  This data was used to conduct experiments exploiting the Support Vector Machine (SVM).
-The collectors used a sensor based approach employing smartphones as sensing tools, utilising the embedded sensors such as microphones, dual cameras, accelerometers and  gyroscopes.   The 3-axial time domain signals from accelerometer and gyroscope in each smart phone were captured at a constant rate of 50 Hz 
+
+The collectors used smartphones as sensing tools, utilising the embedded sensors such as microphones, dual cameras, accelerometers and  gyroscopes.   The 3-axial time domain signals from accelerometer and gyroscope in each smart phone were captured at a constant rate of 50 Hz 
+
 The data set was built from experiments carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (walking, walking upstairs, walking downstairs, sitting, standing, laying) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, 3-axial linear acceleration and 3-axial angular velocity were captured at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually.
+
 The obtained data set has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
+
 
 ###Variables
 The data from each sensor was filtered to remove noise or to discriminate between body and gravity acceleration signals using another filter. 
+
 Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals.  The magnitude of these three-dimensional signals were then calculated using the Euclidean norm. 
+
 A Fast Fourier Transform (FFT) was applied to some of these time domain signals to obtain frequency domain signals.
 The signals were sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window at 50 Hz). From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
+
 The set of variables that were derived from these signals are:
 •	mean(): Mean value
 •	std(): Standard deviation
@@ -36,6 +43,7 @@ No unit of measurement are used as all features were normalized and bounded with
 
 ##Transformed Data
 The raw data sets are processed with run_analisys.R script to create a tidy data set.  This was done in a five step process.
+
 ###STEP 1.  Merge training and test sets
 Test and training data (X_train.txt, X_test.txt), subject ids (subject_train.txt, subject_test.txt) and activity ids (y_train.txt, y_test.txt) are merged to obtain a single data set. Variables are labelled with the names assigned by original collectors (features.txt).
 

@@ -18,5 +18,5 @@ This is the repos of my project files for a course in Data Science : Getting &am
 5.	run the *run_analisys.R* script.  To do this type `source('run_analysis.R')` at the R Consle prompt
 	
 
-Once eth script has run you will find the file `avg_by_activity_subject.txt` containing the tidy data set in the root (active) directory.
+Once the script has run you will find the file `avg_by_activity_subject.txt` containing the tidy data set in the root (active) directory.
 

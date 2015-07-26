@@ -11,7 +11,6 @@ x_test_file  <- paste0(data_root, "/test/X_test.txt")
 y_test_file  <- paste0(data_root, "/test/y_test.txt")
 subject_test_file <- paste0(data_root, "/test/subject_test.txt")
 
-# Check that files exist
 
 
 # Load raw data
@@ -76,7 +75,7 @@ names(data_mean_std) <- gsub('Acc',"Acceleration",names(data_mean_std))
 names(data_mean_std) <- gsub('GyroJerk',"AngularAcceleration",names(data_mean_std))
 names(data_mean_std) <- gsub('Gyro',"AngularSpeed",names(data_mean_std))
 names(data_mean_std) <- gsub('Mag',"Magnitude",names(data_mean_std))
-names(sdata_mean_std) <- gsub('^t',"TimeDomain.",names(data_mean_std))
+names(data_mean_std) <- gsub('^t',"TimeDomain.",names(data_mean_std))
 names(data_mean_std) <- gsub('^f',"FrequencyDomain.",names(data_mean_std))
 names(data_mean_std) <- gsub('\\.mean',".Mean",names(data_mean_std))
 names(data_mean_std) <- gsub('\\.std',".StandardDeviation",names(data_mean_std))
@@ -91,6 +90,7 @@ names(data_mean_std) <- gsub('Freq$',"Frequency",names(data_mean_std))
 #                                                                    #
 #     This is done using the plyr function ddply with the function   #
 #     numcolwise to apply the mean                                   #
+#                                                                    #
 #     Write this dataset to a txt file                               #
 #====================================================================#
 

@@ -13,7 +13,7 @@ The obtained data set has been randomly partitioned into two sets, where 70% of 
 
 
 ###Variables
-The data from each sensor was filtered to remove noise or to discriminate between body and gravity acceleration signals using another filter. 
+The data from each sensor was filtered to remove noise or to discriminate between body and gravity acceleration signals. 
 
 Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals.  The magnitude of these three-dimensional signals were then calculated using the Euclidean norm. 
 
@@ -49,7 +49,7 @@ The raw data sets are processed with *run_analisys.R* script to create a tidy da
 Test and training data (X_train.txt, X_test.txt), subject ids (subject_train.txt, subject_test.txt) and activity ids (y_train.txt, y_test.txt) are merged to obtain a single data set. Variables are labelled with the names assigned by original collectors (features.txt).
 
 ###STEP 2.  Extract mean and standard deviation variables
-From the merged data set is extracted and intermediate data set with only the values of estimated mean (variables with labels that contain "mean") and standard deviation (variables with labels that contain "std").
+From the merged data set an intermediate data set is extracted with only the values of estimated mean (variables with labels that contain "mean") and standard deviation (variables with labels that contain "std").
 
 ###STEP 3.  Use descriptive activity names
 A new column is added to intermediate data set with the activity description. Activity id column is used to look up descriptions in activity_labels.txt.
